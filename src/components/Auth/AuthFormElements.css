@@ -1,0 +1,291 @@
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh; /* Adjusted to give some space for potential app header */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.auth-logo {
+  width: 100px; /* Adjust as needed */
+  height: 100px;
+  margin-bottom: 20px;
+  /* background-image: url('path-to-your-logo.png'); */ /* Placeholder for logo */
+  background-color: #ddd; /* Placeholder */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #555;
+}
+.auth-logo span { /* For "KT" text in logo */
+    color: #8B4513; /* Brownish color, adjust */
+}
+
+
+.auth-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 360px; /* Control max width of form */
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-group .icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1.1rem; /* Adjust icon size */
+}
+
+.auth-input {
+  width: 100%;
+  padding: 12px 15px 12px 45px; /* Left padding for icon */
+  border: 1px solid #ddd;
+  border-radius: 25px; /* Rounded borders */
+  box-sizing: border-box;
+  font-size: 1rem;
+  background-color: #f7f7f7; /* Light grey input background */
+}
+.auth-input:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: #fff;
+}
+
+
+.role-selection-group {
+  margin-bottom: 20px;
+  text-align: left; /* Align label and select to the left */
+}
+.role-selection-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.role-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px; /* Rounded borders */
+  box-sizing: border-box;
+  font-size: 1rem;
+  background-color: #f7f7f7;
+  appearance: none; /* Remove default arrow */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 1em;
+}
+.role-select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+
+.auth-button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff; /* Primary button color */
+  color: white;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+.auth-button:hover {
+  background-color: #0056b3;
+}
+
+.auth-button.secondary {
+  background-color: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+.auth-button.secondary:hover {
+  background-color: #e7f3ff;
+}
+
+
+.options-text {
+  margin: 20px 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.social-login-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between social buttons */
+  margin-bottom: 20px;
+}
+
+.social-btn {
+  width: 50px; /* Adjust size as needed */
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem; /* Icon size */
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+  text-decoration: none;
+}
+
+.social-btn.facebook {
+  color: #fff;
+  background-color: #3b5998; /* Facebook blue */
+  border-color: #3b5998;
+}
+.social-btn.facebook:hover {
+  background-color: #2f477a;
+}
+
+.social-btn.google {
+  color: #fff; /* Often shows Google logo colors, but can be white on colored bg */
+  background-color: #db4437; /* Google red */
+  border-color: #db4437; /* Or white if using Google's official button guidelines */
+ /* For Google official button:
+    background-color: #fff;
+    color: #757575;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+ */
+}
+.social-btn.google:hover {
+  background-color: #c23321;
+}
+
+.auth-link {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+.auth-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.auth-link a:hover {
+  text-decoration: underline;
+}
+
+.auth-header { /* For Sign Up / Sign In pages with back button */
+  width: 100%;
+  max-width: 380px; /* Match form width */
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 10px; /* Consistent padding */
+}
+
+.auth-header .back-button {
+  font-size: 1.8rem;
+  color: #333;
+  text-decoration: none;
+  margin-right: auto; /* Pushes title to center/right */
+  cursor: pointer;
+}
+
+.auth-header .title { /* Reuse existing title class from index.css or redefine */
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  /* margin: 0 auto; /* Center title if back button is on left and no other elements */
+  /* Or let it be naturally positioned if back button is on one side */
+  position: absolute; /* Allows centering relative to parent */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Checkbox for "Remember me" */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #555;
+}
+.checkbox-group input[type="checkbox"] {
+    margin-right: 8px;
+}
+.forgot-password-link {
+    margin-left: auto; /* Pushes it to the right */
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.forgot-password-link:hover {
+    text-decoration: underline;
+}
+
+/* Welcome Screen Specific */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.welcome-logo { /* Similar to auth-logo but maybe larger */
+  width: 120px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #ddd; /* Placeholder */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #555;
+}
+.welcome-logo span {
+    color: #8B4513; /* Brownish color, adjust */
+}
+
+
+.welcome-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.welcome-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 320px;
+  gap: 15px; /* Space between buttons */
+}
+.welcome-buttons .auth-button { /* Reuse auth-button styles */
+  width: 100%;
+}
